@@ -9,7 +9,7 @@ by
 [Dewen Hu](https://dblp.org/pers/h/Hu:Dewen.html), 
 [Matti Pietikäinen](https://en.wikipedia.org/wiki/Matti_Pietik%C3%A4inen_(academic)) and 
 [Li Liu](http://www.ee.oulu.fi/~lili/LiLiuHomepage.html) 
-(\* Authors have equal contributions)
+(\* Authors have equal contributions).
 
 The code is based on [CondenseNet](https://github.com/ShichenLiu/CondenseNet).
 
@@ -63,6 +63,7 @@ Figure 2: Training pipeline.
 
 ## Training and Evaluation
 
+At the moment, the training process on ImageNet is quite slow and memory consuming due to a coarse implementation. For the first bash script of condensenet on ImageNet, the model was trained on two v100 GPUs with 32G gpu memory each.
 
 Remove `--evaluate xxx.tar` to Train, otherwise to Evaluate (the trained models can be downloaded through the following links or [baidunetdisk](https://pan.baidu.com/s/17BqJ4slwwNxRydj9RBT8yQ) (code: 9dtn))
 
@@ -72,7 +73,7 @@ Links for `imagenet_dydensenet_h4.tar` (92.3M):
 [google drive](https://drive.google.com/file/d/1gKrugAFGLea7kjTa_nmhwVAsinoxze8T/view?usp=sharing), 
 [onedirve](https://unioulu-my.sharepoint.com/:u:/g/personal/zsu18_univ_yo_oulu_fi/EeU7Lpe2AUBPsONNZYBVv5kBNAy0sdOlj94iuqCdRRkneQ?e=NaZpQF)
 ```bash
-python main.py --model dydensenet -b 20 -j 4 --data imagenet --datadir /path/to/imagenet \
+python main.py --model dydensenet -b 256 -j 4 --data imagenet --datadir /path/to/imagenet \
 --epochs 120 --lr-type cosine --stages 4-6-8-10-8 --growth 8-16-32-64-128 --bottleneck 4 \
 --heads 4 --group-3x3 4 --gate-factor 0.25 --squeeze-rate 16 --resume --gpu 0 --savedir results/exp \
 --evaluate /path/to/imagenet_dydensenet_h4.tar
@@ -85,7 +86,7 @@ Links for `imagenet_dyresnet18_h4.tar` (47.2M):
 [google drive](https://drive.google.com/file/d/1rtSU3iUKlA0NhgnUJz-QksW5aL2Lt2Cg/view?usp=sharing), 
 [onedirve](https://unioulu-my.sharepoint.com/:u:/g/personal/zsu18_univ_yo_oulu_fi/EaiXCgT7H7NBmBWObq1lOukBUYaQb5J6DOcD3RHFA4PLLQ?e=myQHRN)
 ```bash
-python main.py --model dyresnet18 -b 20 -j 4 --data imagenet --datadir /path/to/imagenet \
+python main.py --model dyresnet18 -b 256 -j 4 --data imagenet --datadir /path/to/imagenet \
 --epochs 120 --lr-type cosine --heads 4 --gate-factor 0.45 --squeeze-rate 16 --resume \
 --gpu 0 --savedir results/exp --evaluate /path/to/imagenet_dyresnet18_h4.tar
 ```
@@ -96,7 +97,7 @@ Links for `cifar10_dydensenet86_h4.tar` (16.7M):
 [google drive](https://drive.google.com/file/d/1o1cVxqa7juDgNRK53dKpfTKEbfMhPSdG/view?usp=sharing), 
 [onedirve](https://unioulu-my.sharepoint.com/:u:/g/personal/zsu18_univ_yo_oulu_fi/EZ6cmeLZGHdLtIJeFiM-FzYBVPDoaj70wZ1r4yT8X48Ivw?e=YocnXs)
 ```bash
-python main.py --model dydensenet -b 20 -j 4 --data cifar10 --datadir ../data --epochs 300 \
+python main.py --model dydensenet -b 64 -j 4 --data cifar10 --datadir ../data --epochs 300 \
 --lr-type cosine --stages 14-14-14 --growth 8-16-32 --bottleneck 4 --heads 4 --group-3x3 4 \
 --gate-factor 0.25 --squeeze-rate 16 --resume --gpu 0 --savedir results/exp \
 --evaluate /path/to/cifar10_dydensenet86_h4.tar
@@ -109,14 +110,12 @@ Links for `cifar100_dydensenet86_h4.tar` (17.0M):
 [google drive](https://drive.google.com/file/d/1Wne46Znto-uivTV-Evc5RHywUEe7Emyn/view?usp=sharing), 
 [onedirve](https://unioulu-my.sharepoint.com/:u:/g/personal/zsu18_univ_yo_oulu_fi/EXci72YYC_1CiA7GwOybIw0BJK9rUg48ZXaapPQvHq0Viw?e=ZKVXk9)
 ```bash
-python main.py --model dydensenet -b 20 -j 4 --data cifar100 --datadir ../data --epochs 300 \
+python main.py --model dydensenet -b 64 -j 4 --data cifar100 --datadir ../data --epochs 300 \
 --lr-type cosine --stages 14-14-14 --growth 8-16-32 --bottleneck 4 --heads 4 --group-3x3 4 \
 --gate-factor 0.25 --squeeze-rate 16 --resume --gpu 0 --savedir results/exp \
 --evaluate /path/to/cifar100_dydensenet86_h4.tar
 ```
 
 ## Other notes
-
-At the moment, the training process on ImageNet is quite slow and memory consuming due to a coarse implementation. For the first bash script of condensenet on ImageNet, the model was trained on two v100 GPUs with 32G gpu memory each.
 
 Any discussions or concerns are welcomed in the [Issues](https://github.com/zhuogege1943/dgc/issues)!
