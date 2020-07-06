@@ -27,7 +27,7 @@ If you find our project useful in your research, please consider citing:
 ## Introduction
 
 
-Dynamic Group Convolution (DGC) can adaptively selects which part
+Dynamic Group Convolution (DGC) can adaptively select which part
 of input channels to be connected within each group for individual
 samples on the fly. Specifically, we equip each group with a small feature
 selector to automatically select the most important input channels
