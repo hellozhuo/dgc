@@ -118,4 +118,3 @@ python main.py --model dydensenet -b 20 -j 4 --data cifar100 --datadir ../data -
 At the moment, the training process on ImageNet is quite slow and memory consuming due to a coarse implementation. For the first bash script of condensenet on ImageNet, the model was trained on two v100 GPUs with 32G gpu memory each.
 
 Any discussions or concerns are welcomed in the [Issues](https://github.com/zhuogege1943/dgc/issues)!
-total 174M
