@@ -102,6 +102,7 @@ ENV/
 
 # result files
 results/*
+*run*.sh
 
 .DS_Store
 *.swp
