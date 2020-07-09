@@ -21,7 +21,7 @@ If you find our project useful in your research, please consider citing:
 ```
 @inproceedings{su2020dgc,
   title={Dynamic Group Convolution for Accelerating Convolutional Neural Networks},
-  author={Zhuo, Su and Linpu, Fang and Wenxiong, Kang and Dewen, Hu and Matti, Pietikäinen and Li, Liu},
+  author={Su, Zhuo and Fang, Linpu and Kang, Wenxiong and Hu, Dewen and Matti, Pietikäinen and Liu, Li},
   booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
   year={2020}
 }
