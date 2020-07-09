@@ -1,7 +1,7 @@
 # Dynamic Group Convolution
 
 This repository contains the PyTorch implementation for 
-"[Dynamic Group Convolution for Accelerating Convolutional Neural Networks]()" 
+"Dynamic Group Convolution for Accelerating Convolutional Neural Networks" 
 by 
 [Zhuo Su](http://www.ee.oulu.fi/~zsu18/zhuosu.html)\*, 
 [Linpu Fang](https://dblp.org/pers/hd/f/Fang:Linpu)\*, 
@@ -9,9 +9,10 @@ by
 [Dewen Hu](https://dblp.org/pers/h/Hu:Dewen.html), 
 [Matti Pietikäinen](https://en.wikipedia.org/wiki/Matti_Pietik%C3%A4inen_(academic)) and 
 [Li Liu](http://www.ee.oulu.fi/~lili/LiLiuHomepage.html) 
-(\* Authors have equal contributions).
+(\* Authors have equal contributions). \[[arXiv](https://arxiv.org/abs/2007.04242), [openreview](https://openreview.net/forum?id=SNJHfDgDq6&noteId=UrD-U14vUSZ)\]
 
 The code is based on [CondenseNet](https://github.com/ShichenLiu/CondenseNet).
+
 
 ### Citation
 
@@ -63,7 +64,7 @@ Figure 2: Training pipeline.
 
 ## Training and Evaluation
 
-At the moment, the training process on ImageNet is quite slow and memory consuming due to a coarse implementation. For the first bash script of condensenet on ImageNet, the model was trained on two v100 GPUs with 32G gpu memory each.
+At the moment, we are sorry to tell that the training process on ImageNet is somewhat slow and memory consuming because this is still a coarse implementation. For the first bash script of condensenet on ImageNet, the model was trained on two v100 GPUs with 32G gpu memory each.
 
 Remove `--evaluate xxx.tar` to Train, otherwise to Evaluate (the trained models can be downloaded through the following links or [baidunetdisk](https://pan.baidu.com/s/17BqJ4slwwNxRydj9RBT8yQ) (code: 9dtn))
 
