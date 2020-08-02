@@ -120,3 +120,6 @@ python main.py --model dydensenet -b 64 -j 4 --data cifar100 --datadir ../data -
 ## Other notes
 
 Any discussions or concerns are welcomed in the [Issues](https://github.com/zhuogege1943/dgc/issues)!
+
+## Job Opportunity
+There are Doctoral student/PostDoc position available at the research unit Center for Machine Vision and Signal analysis of the University of Oulu, Finland, 2020 (The salary is about 2000 euros/month (after tax) for PhD and much more for PostDoc). If you are interested, please visit [Li Liu's Homepage](http://www.ee.oulu.fi/~lili/LiLiuHomepage.html).
