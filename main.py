@@ -115,6 +115,7 @@ def main():
     n_flops, n_params = measure_model(model, R, R)
     print('FLOPs: %.2fM, Params: %.2fM' % (n_flops / 1e6, n_params / 1e6))
 
+    os.makedirs(args.savedir, exist_ok=True)
     log_file = os.path.join(args.savedir, "%s_%d_%d.txt" % \
         (args.model, int(n_params), int(n_flops)))
     del(model)
