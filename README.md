@@ -9,7 +9,7 @@ by
 [Dewen Hu](https://dblp.org/pers/h/Hu:Dewen.html), 
 [Matti Pietikäinen](https://en.wikipedia.org/wiki/Matti_Pietik%C3%A4inen_(academic)) and 
 [Li Liu](http://www.ee.oulu.fi/~lili/LiLiuHomepage.html) 
-(\* Authors have equal contributions). \[[arXiv](https://arxiv.org/abs/2007.04242), [openreview](https://openreview.net/forum?id=SNJHfDgDq6&noteId=UrD-U14vUSZ)\]
+(\* Authors have equal contributions). \[[arXiv](https://arxiv.org/abs/2007.04242)\]
 
 The code is based on [CondenseNet](https://github.com/ShichenLiu/CondenseNet).
 
@@ -121,5 +121,3 @@ python main.py --model dydensenet -b 64 -j 4 --data cifar100 --datadir ../data -
 
 Any discussions or concerns are welcomed in the [Issues](https://github.com/zhuogege1943/dgc/issues)!
 
-## Job Opportunity
-There are Doctoral student/PostDoc position available at the research unit Center for Machine Vision and Signal analysis of the University of Oulu, Finland, 2020 (The salary is about 2000 euros/month (after tax) for PhD and much more for PostDoc). If you are interested, please visit [Li Liu's Homepage](http://www.ee.oulu.fi/~lili/LiLiuHomepage.html).
