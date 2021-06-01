@@ -3,7 +3,7 @@
 This repository contains the PyTorch implementation for 
 "Dynamic Group Convolution for Accelerating Convolutional Neural Networks" 
 by 
-[Zhuo Su](http://www.ee.oulu.fi/~zsu18/zhuosu.html)\*, 
+[Zhuo Su](https://zhuogege1943.com/homepage/)\*, 
 [Linpu Fang](https://dblp.org/pers/hd/f/Fang:Linpu)\*, 
 [Wenxiong Kang](http://www.scholat.com/auwxkang.en), 
 [Dewen Hu](https://dblp.org/pers/h/Hu:Dewen.html), 
